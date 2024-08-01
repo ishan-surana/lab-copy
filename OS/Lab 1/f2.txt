@@ -1,0 +1,2 @@
+okie biro
+EOF ; cat f2.txt >> f4.txt
