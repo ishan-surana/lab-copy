@@ -1,1 +1,28 @@
+cat file2.txt | grep -E ell
+sort -o file2.txt sorted_file.txt
+wc -w/-l/-c/-m
+cut -d "-" -f 2 / cut -c 0-9
+sed -e 's/ip/op/g' / -i [= inplace]
+tr
+ps
+kill
+chmod
+echo
+bc
+vi [l, h to left right, k , j to up right, Esc to command, :dN to delete N lines from current]
 
+cat texts.txt | grep '^..$'
+cat texts.txt | grep '^[A-Z]'
+cat texts.txt | grep '\.$'
+cat texts.txt | grep -E " +"
+cat texts.txt | grep -E "[0-9]" > has_numbers.txt
+
+cat data.txt | cut -d ":" -f 3| grep ICT | wc -l
+cat data.txt | sed -e "s/IT/Information Technology/" > it_modified.txt
+cat data.txt | grep "1234:" | cut -d ":" -f 6-8 | tr ':' '+' | sed 's/$/)/; s/^/(/; s/$/\/3/' | bc
+# cat data.txt | grep "1234:" | cut -d ":" -f 6-8 | awk -F: '{print($1+$2+$3)/3}'
+sed -n '1s/.*/\U&/p;2,$p' data.txt       # awk 'NR==1 {print toupper($0); next} {print}' data.txt
+
+grep -l MIT ./*
+wc $(ls | grep "[0-9]")
+kill -9 $(pgrep wc)    /     kill -9 $(ps | grep "wc" | cut -d " " -f 4)
